@@ -12,12 +12,10 @@ Software para biblioteca em java. O sistema contém as funcionalidades básicas,
 - **Netbeans** como IDE
 - **Java 7**
 
-# Modelagem
-<img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_cod_java/master/imagens/tela-inicial.png" width="460" />
 
 ## Telas
 ### Tela Inicial
-<img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-inicial.png" width="460" />
+<img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_cod_java/master/imagens/tela-inicial.png" width="460" />
 
 ### Tela Edição de Clientes
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-clientes.png" width="460" />
@@ -30,3 +28,6 @@ Software para biblioteca em java. O sistema contém as funcionalidades básicas,
 
 ### Tela Edição de Multas
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-multas.png" width="460" />
+
+# Modelagem
+<img src="" width="460" />
