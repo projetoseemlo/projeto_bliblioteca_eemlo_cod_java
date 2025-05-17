@@ -1,12 +1,12 @@
 # Projeto Biblioteca em Java Desktop
 
-Software para biblioteca em java, simples. O sistema contém somente as funcionalidades básicas, desenvolvido a fim de obter nota para a matéria de Programação OO do 3ª período de Análise e Desenvolvimento de Sistemas.
+Software para biblioteca em java. O sistema contém as funcionalidades básicas, desenvolvido a fim de obter nota para a matéria de Programação OO do 3ª módulo do curso técnico em informática.
 
 ---
 
-**Author:** João Paulo Ferreira da Silva (PauloJP)
+**Author:** João Paulo Ferreira da Silva  **Adaptado por:**  Gregory, Guilbert, Isaac, Luiz
 
-**Data:** 06/2015
+**Data:** 05/2025
 
 # Tecnologias Utilizadas:
 - **Netbeans** como IDE
