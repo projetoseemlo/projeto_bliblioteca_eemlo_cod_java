@@ -1,6 +1,6 @@
-# Projeto Biblioteca em Java Desktop
+## Projeto Biblioteca em Java Desktop
 
-Software para biblioteca em java. O sistema contém as funcionalidades básicas, desenvolvido a fim de obter nota para a matéria de Programação OO do 3ª módulo do curso técnico em informática.
+Software para biblioteca em java. O sistema contém as funcionalidades básicas, desenvolvido a fim de fornecer um produto para a Biblioteca e obter notas no trabalho interdisciplinar.
 
 ---
 
@@ -13,7 +13,7 @@ Software para biblioteca em java. O sistema contém as funcionalidades básicas,
 - **Java 7**
 
 # Modelagem
-<img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/modelagem.png" width="460" />
+<img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_cod_java/master/imagens/tela-inicial.png" width="460" />
 
 ## Telas
 ### Tela Inicial
