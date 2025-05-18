@@ -4,14 +4,18 @@ Software para biblioteca em java.
 
 O foi desenvolvido a fim de fornecer um produto para a Biblioteca e obter aplicar conhecimentos oriundos do trabalho interdisciplinar.
 
-#Disciplinas envolvidas:#
+# Disciplinas envolvidas:#
 
 ---
 
 **Adaptado por:**  
 Gregory, Guilbert, Isaac, Luiz (Git)
-
 Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (menção) 
+
+**Tutores**
+Fabiana git
+Leandro git
+Tales git
 
 **Data:** 05/2025
 
