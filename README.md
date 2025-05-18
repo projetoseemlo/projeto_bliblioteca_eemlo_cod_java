@@ -23,17 +23,17 @@ Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (menção)
 ### Tela Inicial
 <img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_cod_java/master/imagens/tela-inicial.png" width="460" />
 
-### Tela Edição de Clientes
+### Tela Usuários
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-clientes.png" width="460" />
 
-### Tela Edição de Livros
+### Tela Livros
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-livros.png" width="460" />
 
-### Tela Edição de Empréstimos
+### Tela Empréstimos
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-emprestimos.png" width="460" />
 
-### Tela Edição de Multas
+### Tela Penalidades
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-multas.png" width="460" />
 
-# Modelagem
+# Modelagem de dados
 <img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_doc/main/Banco_de_dados/Modelagem/modelagem.png" width="460" />
