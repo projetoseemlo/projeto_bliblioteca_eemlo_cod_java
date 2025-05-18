@@ -1,16 +1,25 @@
+# Biblioteca Escolar
+
 ## Projeto Biblioteca em Java Desktop
 
-Software para biblioteca em java.
+O projeto foi desenvolvido a fim de fornecer um produto para a Biblioteca da Escola Estadua Maria de Lourdes Oliveira e aplicar de foma prática os conhecimentos oriundos do projeto integrador.
 
-O foi desenvolvido a fim de fornecer um produto para a Biblioteca e obter aplicar conhecimentos oriundos do trabalho interdisciplinar.
+# Disciplinas envolvidas (no ano letivo):#
 
-# Disciplinas envolvidas:#
-
----
+## 1º Módulo:
+- Técnicas de conversação
+- Estatística
+## 3º Módulo:
+- Análise de Projetos
+- Banco de Dados
+- Estatística
+- Programação Orientada de Objetos
+- Projeto Integrador
+- Técnicas de Conversação
 
 **Adaptado por:**  
 Gregory, Guilbert, Isaac, Luiz (Git)
-Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (menção) 
+Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (git/menção) 
 
 **Tutores**
 Fabiana git
