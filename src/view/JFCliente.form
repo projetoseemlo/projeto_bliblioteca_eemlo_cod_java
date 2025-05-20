@@ -47,9 +47,9 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel3" max="32767" attributes="0"/>
-                  <Component id="jPanel1" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -93,6 +93,7 @@
                               <Component id="jT5Endereco" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jT6Fone" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                                       <Component id="jT1Nome" min="-2" pref="400" max="-2" attributes="0"/>
                                       <Component id="jT0Id" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
@@ -111,8 +112,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jT2DataAno" min="-2" pref="65" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jFormattedTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jT6Fone" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jT4Cpf" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -153,7 +153,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jFormattedTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jT4Cpf" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -209,13 +209,14 @@
         <Component class="javax.swing.JTextField" name="jT1Nome">
         </Component>
         <Component class="javax.swing.JTextField" name="jT2DataAno">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jT2DataAnoActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jT3Sexo">
         </Component>
+        <Component class="javax.swing.JTextField" name="jT4Cpf">
+        </Component>
         <Component class="javax.swing.JTextField" name="jT5Endereco">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jT6Fone">
         </Component>
         <Component class="javax.swing.JTextField" name="jT0Id">
         </Component>
@@ -234,19 +235,6 @@
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="text" type="java.lang.String" value="/"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="   .   .   -  "/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFormattedTextField1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="jT6Fone">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="(  )     -    "/>
           </Properties>
         </Component>
       </SubComponents>
