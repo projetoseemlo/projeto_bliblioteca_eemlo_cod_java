@@ -107,6 +107,12 @@ public class JFCliente extends javax.swing.JFrame {
 
         jLabel7.setText("ID: ");
 
+        jT4Cpf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jT4CpfActionPerformed(evt);
+            }
+        });
+
         jT2DataDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT2DataDiaActionPerformed(evt);
@@ -430,6 +436,10 @@ public class JFCliente extends javax.swing.JFrame {
     private void jT2DataDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT2DataDiaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jT2DataDiaActionPerformed
+
+    private void jT4CpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT4CpfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jT4CpfActionPerformed
     
     
     
@@ -628,7 +638,7 @@ public class JFCliente extends javax.swing.JFrame {
         jT3Sexo.setText("");
         jT4Cpf.setText("");
         jT5Endereco.setText("");
-        jFormattedTextField2.setText(""); 
+        
     }
     
     // Desabilita os campos do formulário
@@ -639,7 +649,7 @@ public class JFCliente extends javax.swing.JFrame {
         jT3Sexo.setEditable(false);
         jT4Cpf.setEditable(false);
         jT5Endereco.setEditable(false);
-        jFormattedTextField2.setEditable(false);
+        
     }
     
     // Habilita os campos do formulário
@@ -650,7 +660,7 @@ public class JFCliente extends javax.swing.JFrame {
         jT3Sexo.setEditable(true);
         jT4Cpf.setEditable(true);
         jT5Endereco.setEditable(true);
-        jFormattedTextField2.setEditable(true);
+       
     }
     
     /* <-OUTROS---- */
