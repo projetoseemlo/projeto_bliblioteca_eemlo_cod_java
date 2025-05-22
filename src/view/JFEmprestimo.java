@@ -579,7 +579,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
                             JOptionPane.showMessageDialog(rootPane, "Erro ao efetuar empréstimo.");
                         }
                     } else {
-                        JOptionPane.showMessageDialog(rootPane, "ERRO Empréstimo não autorizado.\nUsuário com pendências correspondentes à multa.\n\n"
+                        JOptionPane.showMessageDialog(rootPane, "ERRO Empréstimo não autorizado.\nUsuário com pendências correspondentes à penalidade.\n\n"
                                 + "Só poderá solicitar um novo empréstimo após sanar as pendências.");
                     }
                 }
