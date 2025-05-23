@@ -410,7 +410,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
+                                .addGap(0, 0, 0)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -430,7 +430,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
+                .addContainerGap())
         );
 
         jPanel1.getAccessibleContext().setAccessibleName("Cadastro de Clientes");
@@ -567,7 +567,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
 
                             d.adicionaEmprestimo(e);
 
-                            //alteraDisponibilidade("0");
+                            alteraDisponibilidade("0");
 
                             JOptionPane.showMessageDialog(rootPane, "Empréstimo efetuado com sucesso.");
                             limpaCamposEmprestimo();
@@ -579,7 +579,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
                             JOptionPane.showMessageDialog(rootPane, "Erro ao efetuar empréstimo.");
                         }
                     } else {
-                        JOptionPane.showMessageDialog(rootPane, "ERRO Empréstimo não autorizado.\nUsuário com pendências correspondentes à multa.\n\n"
+                        JOptionPane.showMessageDialog(rootPane, "ERRO Empréstimo não autorizado.\nUsuário com pendências correspondentes à penalidade.\n\n"
                                 + "Só poderá solicitar um novo empréstimo após sanar as pendências.");
                     }
                 }
@@ -611,7 +611,7 @@ public class JFEmprestimo extends javax.swing.JFrame {
     
     // Método p/ verifica se o livro está disponível
     private boolean verificaDisponibilidadeLivro() {
-        if (! disponibilidadeLivro().equals("0")) {
+        if (! disponibilidadeLivro().equals("Não")) {
             return true;
         }
         JOptionPane.showMessageDialog(rootPane, "Livro selecionado está indisponível.");
