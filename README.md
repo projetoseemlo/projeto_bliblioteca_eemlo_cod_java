@@ -1,36 +1,38 @@
 # Biblioteca Escolar
 
 ## Projeto Biblioteca em Java Desktop
+Este software foi desenvolvido para gerenciar as operações básicas da biblioteca escolar. É um trabalho interdisciplinar desenvolvido com os alunos do 1º e 3º módulos do curso Técnico em Informática, a fim de cumprir os requisitos avaliativos das disciplinas.
+Código baseado no produzido por João Paulo Ferreira da Silva  
 
-O projeto foi desenvolvido a fim de fornecer um produto para a Biblioteca da Escola Estadua Maria de Lourdes Oliveira e aplicar de foma prática os conhecimentos oriundos do projeto integrador.
+### Desenvolvedores: ###
+- [Gregory](https://github.com/GregoryVitor),
+- [Guilbert](https://github.com/GuilbertVRS),
+- [Isaac](https://github.com/IsaacsBusiness), 
+- [Luiz](https://github.com/LuizFelipeMELOO)
+### Scrum Master ###
+- [Daniel](https://github.com/DanielMagalhaesPego), 
+### PO ###
+- Sonia
+### Projeto desenvolvido desenvolvido pelos professores ###
+- [Tales](https://github.com/profTales) - Projeto Integrador, Empreendorismo
+- [Leandro](https://github.com/leandro1775689) - Programação Orientada a Objetos, Programação para Internet
+- [Fabiana](https://github.com/fabianajsantos) - Banco de dados, Análise de Projetos, Estatítica, Técnicas de Comunicação e Conversação
+  
+*Sem o apoio dos professores Tales, Leandro, e da direção, o projeto não teria sido possivel.🙏*
+### Documentação/Atas ###
+Alunos do 1º módulo 
 
-# Disciplinas envolvidas (no ano letivo):#
+## Atividades ##
+Data: 05/2025
 
-## 1º Módulo:
-- Técnicas de conversação
-- Estatística
-## 3º Módulo:
-- Análise de Projetos
-- Banco de Dados
-- Estatística
-- Programação Orientada de Objetos
-- Projeto Integrador
-- Técnicas de Conversação
-
-**Adaptado por:**  
-Gregory, Guilbert, Isaac, Luiz (Git)
-Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (git/menção) 
-
-**Tutores**
-Fabiana git
-Leandro git
-Tales git
-
-**Data:** 05/2025
-
-# Tecnologias Utilizadas:
-- **Netbeans** como IDE
-- **Java 7**
+### Tecnologias Utilizadas: ###
+## IDE ##
+- Netbeans como IDE
+- Myql workbench
+## Linguagens ##
+- Java 7
+- SQL
+- Ferramentas de IA
 
 ## Telas
 ### Tela Inicial
@@ -48,5 +50,5 @@ Tales git
 ### Tela Penalidades
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-multas.png" width="460" />
 
-# Modelagem de dados
-<img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_doc/main/Banco_de_dados/Modelagem/modelagem.png" width="460" />
+## Modelagem
+<img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_doc/refs/heads/main/Banco_de_dados/Modelagem/modelagem.png" width="460" />

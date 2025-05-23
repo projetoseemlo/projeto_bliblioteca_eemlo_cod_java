@@ -18,9 +18,9 @@ public class CriaConexao {
     public static Connection getConexao() throws SQLException {
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Conectando ao banco de dados.");
-            return DriverManager.getConnection("jdbc:mysql://localhost/biblioteca", "root", "P9544504");
+            return DriverManager.getConnection("jdbc:mysql://localhost/biblioteca", "root", "");
         } catch (ClassNotFoundException e) {
             throw new SQLException(e.getMessage());
         }   
