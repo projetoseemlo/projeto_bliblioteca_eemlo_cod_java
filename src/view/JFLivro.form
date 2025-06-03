@@ -35,7 +35,7 @@
                       <Component id="jPanel1" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -288,7 +288,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jBExcluir" alignment="1" max="32767" attributes="0"/>
                       <Component id="jBAlterar" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jBNovo" alignment="0" pref="125" max="32767" attributes="0"/>
+                      <Component id="jBNovo" alignment="0" pref="139" max="32767" attributes="0"/>
                       <Component id="jBCadastrar" alignment="0" max="32767" attributes="0"/>
                       <Component id="jBSair" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -333,7 +333,8 @@
         </Component>
         <Component class="javax.swing.JButton" name="jBNovo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Novo Usuario"/>
+            <Property name="actionCommand" type="java.lang.String" value="Novo Livro"/>
+            <Property name="label" type="java.lang.String" value="Novo Livro"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNovoActionPerformed"/>

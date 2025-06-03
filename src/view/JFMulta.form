@@ -38,16 +38,16 @@
                       <Component id="jPanel1" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel4" max="32767" attributes="0"/>
                           <Component id="jPanel3" max="32767" attributes="0"/>
-                          <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -140,7 +140,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ID do cliente: "/>
+            <Property name="text" type="java.lang.String" value="ID do usuario: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -274,7 +274,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nome do cliente: "/>
+            <Property name="text" type="java.lang.String" value="Nome do usuario: "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -303,7 +303,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Selecione o cliente abaixo: "/>
+            <Property name="text" type="java.lang.String" value="Selecione o usuario abaixo: "/>
           </Properties>
         </Component>
       </SubComponents>
@@ -323,15 +323,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jBExcluir" linkSize="7" min="-2" pref="104" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="jBPagar" linkSize="7" min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Component id="jBRegistrar" linkSize="7" min="-2" pref="123" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jBNovo" linkSize="7" min="-2" pref="97" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jBRegistrar" linkSize="7" min="-2" pref="123" max="-2" attributes="0"/>
+                          <Component id="jBExcluir" linkSize="7" min="-2" pref="104" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jBSair" linkSize="7" min="-2" pref="135" max="-2" attributes="0"/>
                       </Group>
@@ -346,13 +344,12 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jBPagar" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBExcluir" linkSize="5" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="jBRegistrar" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="21" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jBExcluir" linkSize="5" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jBSair" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBRegistrar" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jBNovo" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -368,14 +365,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBExcluirActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jBNovo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Novo"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBNovoActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="jBSair">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sair"/>
@@ -385,9 +374,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBRegistrar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Registrar"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBRegistrarActionPerformed"/>
           </Events>
@@ -398,6 +384,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBPagarMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBPagarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
