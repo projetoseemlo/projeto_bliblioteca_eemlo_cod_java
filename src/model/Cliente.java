@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author tsiqueira
+ * @author paulojp
  */
 public class Cliente {
     

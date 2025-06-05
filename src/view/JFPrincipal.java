@@ -44,10 +44,10 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utils/imagens/ChatGPT Image 12 de mai. de 2025, 21_06_10.jpg"))); // NOI18N
 
-        jMenu2.setText("Alunos");
-        jMenu2.setActionCommand("Alunos");
+        jMenu2.setText("Usuario");
 
-        jMCliente.setText("Editar Alunos");
+        jMCliente.setText("Editar Usuario");
+        jMCliente.setActionCommand("Usuario");
         jMCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMClienteActionPerformed(evt);
@@ -113,8 +113,8 @@ public class JFPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,6 +220,3 @@ public class JFPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
-//teste
-//teste
-//teste
