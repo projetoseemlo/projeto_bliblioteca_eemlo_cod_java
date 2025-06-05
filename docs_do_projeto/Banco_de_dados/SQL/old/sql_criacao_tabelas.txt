@@ -1,0 +1,152 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema biblioteca
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `biblioteca` DEFAULT CHARACTER SET utf8 ;
+USE `biblioteca` ;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`usuario`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`usuario` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`usuario` (
+  `id_usuario` INT(10) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(100) NOT NULL,
+  `cpf` VARCHAR(20) NOT NULL,
+  `data_nasc` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`id_usuario`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`penalidade`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`penalidade` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`penalidade` (
+  `id_penalidade` INT(10) NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(60) NOT NULL,
+  `ind_suspenso` TINYINT NOT NULL,
+  `data_inicio_suspensao` DATE NULL,
+  `data_fim_suspensao` DATE NULL,
+  PRIMARY KEY (`id_penalidade`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`localizacao`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`localizacao` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`localizacao` (
+  `id_localizacao` INT NOT NULL,
+  `estante` VARCHAR(3) NULL,
+  `prateleira` VARCHAR(3) NULL,
+  PRIMARY KEY (`id_localizacao`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`livro`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`livro` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`livro` (
+  `id_livro` INT(10) NOT NULL AUTO_INCREMENT,
+  `ISBN` VARCHAR(20) NOT NULL,
+  `autor` VARCHAR(100) NOT NULL,
+  `edicao` TINYINT(3) NOT NULL,
+  `ano` SMALLINT(6) NOT NULL,
+  `genero` VARCHAR(45) NULL,
+  `exemplar` VARCHAR(100) NOT NULL,
+  `disponibilidade` CHAR(1) NOT NULL,
+  `localizacao_id_localizacao` INT NOT NULL,
+  `id_estoque` INT NULL,
+  PRIMARY KEY (`id_livro`, `ISBN`),
+  INDEX `fk_livro_localizacao1_idx` (`localizacao_id_localizacao` ASC),
+  CONSTRAINT `fk_livro_localizacao1`
+    FOREIGN KEY (`localizacao_id_localizacao`)
+    REFERENCES `biblioteca`.`localizacao` (`id_localizacao`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`emprestimo`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`emprestimo` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`emprestimo` (
+  `id_emprestimo` INT(10) NOT NULL AUTO_INCREMENT,
+  `id_usuario` INT(10) NOT NULL,
+  `id_livro` INT(10) NOT NULL,
+  `data_emprestimo` DATE NULL,
+  `data_devolucao` DATE NULL,
+  PRIMARY KEY (`id_emprestimo`),
+  INDEX `fk_emprestimo_livro1_idx` (`id_livro` ASC),
+  INDEX `fk_emprestimo_usuario1_idx` (`id_usuario` ASC),
+  CONSTRAINT `fk_emprestimo_usuario1`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `biblioteca`.`usuario` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_emprestimo_livro1`
+    FOREIGN KEY (`id_livro`)
+    REFERENCES `biblioteca`.`livro` (`id_livro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`estoque`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`estoque` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`estoque` (
+  `id_estoque` INT NOT NULL,
+  `ISBN` VARCHAR(20) NOT NULL,
+  `qtd_exemplares` INT NULL,
+  `livro_id_livro` INT(10) NOT NULL,
+  `livro_ISBN` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`ISBN`, `id_estoque`),
+  INDEX `fk_Estoque_livro1_idx` (`livro_id_livro` ASC, `livro_ISBN` ASC),
+  CONSTRAINT `fk_Estoque_livro1`
+    FOREIGN KEY (`livro_id_livro`, `livro_ISBN`)
+    REFERENCES `biblioteca`.`livro` (`id_livro`, `ISBN`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `biblioteca`.`usuario_penalidade`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `biblioteca`.`usuario_penalidade` ;
+
+CREATE TABLE IF NOT EXISTS `biblioteca`.`usuario_penalidade` (
+  `usuario_id_usuario` INT(10) NOT NULL,
+  `penalidade_id_penalidade` INT(10) NOT NULL,
+  PRIMARY KEY (`usuario_id_usuario`, `penalidade_id_penalidade`),
+  INDEX `fk_usuario_has_penalidade_penalidade1_idx` (`penalidade_id_penalidade` ASC),
+  INDEX `fk_usuario_has_penalidade_usuario1_idx` (`usuario_id_usuario` ASC),
+  CONSTRAINT `fk_usuario_has_penalidade_usuario1`
+    FOREIGN KEY (`usuario_id_usuario`)
+    REFERENCES `biblioteca`.`usuario` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuario_has_penalidade_penalidade1`
+    FOREIGN KEY (`penalidade_id_penalidade`)
+    REFERENCES `biblioteca`.`penalidade` (`id_penalidade`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+
