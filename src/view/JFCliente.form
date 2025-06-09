@@ -5,9 +5,6 @@
     <Property name="defaultCloseOperation" type="int" value="2"/>
     <Property name="title" type="java.lang.String" value="Dados dos Usuarios"/>
   </Properties>
-  <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Dados dos Usuarios"/>
-  </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
@@ -88,35 +85,23 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jT1Nome" pref="400" max="32767" attributes="0"/>
-                      <Component id="jT0Id" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="jT5Endereco" pref="400" max="32767" attributes="0"/>
                       <Component id="jT4Cpf" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                       <Component id="jT6Fone" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                      <Component id="jT5Endereco" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jT2DataDia" linkSize="6" min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jT3Sexo" min="-2" pref="30" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel9" min="-2" pref="15" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="jT2DataMes" linkSize="6" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" min="-2" pref="15" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jT2DataAno" min="-2" pref="65" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" min="-2" pref="239" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jT3Sexo" min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" pref="239" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jT2DataAno" min="-2" pref="69" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="jLabel10" min="-2" pref="15" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jT0Id" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="jT1Nome" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="48" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -136,19 +121,16 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jT2DataAno" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jT2DataDia" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jT2DataMes" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jT2DataAno" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jT3Sexo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jT4Cpf" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -204,30 +186,11 @@
             <Property name="text" type="java.lang.String" value="ID: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jT1Nome">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jT2DataAno">
-        </Component>
         <Component class="javax.swing.JTextField" name="jT5Endereco">
         </Component>
         <Component class="javax.swing.JTextField" name="jT0Id">
         </Component>
-        <Component class="javax.swing.JTextField" name="jT2DataDia">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jT2DataDiaActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jT2DataMes">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="/"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="/"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="jT6Fone">
           <Properties>
@@ -255,6 +218,21 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="No Sexo, informe apenas &quot;M&quot; ou &quot;F&quot;"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="jT2DataAno">
+          <Properties>
+            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+              <Format format="##/##/####" subtype="-1" type="5"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jT2DataAnoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JFormattedTextField" name="jT1Nome">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jT1NomeActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
