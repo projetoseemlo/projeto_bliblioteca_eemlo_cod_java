@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
 import model.Cliente;
 import utils.BdCliente;
 
@@ -26,7 +28,11 @@ public class JFCliente extends javax.swing.JFrame {
      * Creates new form Cliente
      */
     public JFCliente() {
+        
+        
         initComponents();
+        
+        
         
         // Desabilita os campos ao iniciar a janela
         desabilitaCampos();
@@ -65,7 +71,6 @@ public class JFCliente extends javax.swing.JFrame {
         jT6Fone = new javax.swing.JFormattedTextField();
         jT4Cpf = new javax.swing.JFormattedTextField();
         jT3Sexo = new javax.swing.JFormattedTextField();
-        jLabel11 = new javax.swing.JLabel();
         jT2DataAno = new javax.swing.JFormattedTextField();
         jT1Nome = new javax.swing.JFormattedTextField();
         jPanel2 = new javax.swing.JPanel();
@@ -124,8 +129,6 @@ public class JFCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setText("No Sexo, informe apenas \"M\" ou \"F\"");
-
         try {
             jT2DataAno.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -162,10 +165,7 @@ public class JFCliente extends javax.swing.JFrame {
                     .addComponent(jT5Endereco, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                     .addComponent(jT4Cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jT6Fone, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jT3Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jT3Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jT2DataAno, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
@@ -193,8 +193,7 @@ public class JFCliente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jT3Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jT3Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -368,10 +367,40 @@ public class JFCliente extends javax.swing.JFrame {
       
     // BOTÃO CADASTRAR - Precionando
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
+       
+      
+        String sexo = jT3Sexo.getText().trim();
+
+if (!sexo.matches("^[MF]{1}$")) {
+    JOptionPane.showMessageDialog(this, "O campo Sexo deve conter apenas 'M' ou 'F'.", "Erro de validação", JOptionPane.ERROR_MESSAGE);
+    return;
+}
+
+
+        
         String texto = jT3Sexo.getText().toUpperCase();
         
         String texto1 = jT1Nome.getText().toUpperCase();
         jT1Nome.setText(texto1);
+         
+        ((javax.swing.text.AbstractDocument) jT1Nome.getDocument()).setDocumentFilter(new javax.swing.text.DocumentFilter() {
+    @Override
+    public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
+        if (string != null) {
+            string = string.replaceAll("[^a-zA-Z ]", "").toUpperCase();
+            super.insertString(fb, offset, string, attr);
+        }
+    }
+
+    @Override
+    public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+        if (text != null) {
+            text = text.replaceAll("[^a-zA-Z ]", "").toUpperCase();
+            super.replace(fb, offset, length, text, attrs);
+        }
+    }
+});
+
         
         cadastraRegistro(); 
         
@@ -481,6 +510,25 @@ public class JFCliente extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(rootPane, "Para cadastrar um novo registro.\nClique em 'Novo'.");
         }
+    
+    ((javax.swing.text.AbstractDocument) jT3Sexo.getDocument()).setDocumentFilter(new javax.swing.text.DocumentFilter() {
+    @Override
+    public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
+        if (string != null) {
+            string = string.replaceAll("[^a-zA-Z]", "").toUpperCase();
+            super.insertString(fb, offset, string, attr);
+        }
+    }
+
+    @Override
+    public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+        if (text != null) {
+            text = text.replaceAll("[^a-zA-Z]", "").toUpperCase();
+            super.replace(fb, offset, length, text, attrs);
+        }
+    }
+});
+
     }
     
     // Método p/ validação do formulário
@@ -718,7 +766,6 @@ public class JFCliente extends javax.swing.JFrame {
     private javax.swing.JButton jBSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -88,11 +88,7 @@
                       <Component id="jT5Endereco" pref="400" max="32767" attributes="0"/>
                       <Component id="jT4Cpf" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                       <Component id="jT6Fone" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jT3Sexo" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jLabel11" min="-2" pref="239" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jT3Sexo" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jT2DataAno" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -128,7 +124,6 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jT3Sexo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel11" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -213,11 +208,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jT3SexoActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="No Sexo, informe apenas &quot;M&quot; ou &quot;F&quot;"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="jT2DataAno">
           <Properties>
