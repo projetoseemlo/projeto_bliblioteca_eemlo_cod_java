@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
 import model.Cliente;
 import utils.BdCliente;
 
@@ -384,6 +385,8 @@ if (!sexo.matches("^[MF]{1}$")) {
         jT1Nome.setText(texto1);
          
         ((javax.swing.text.AbstractDocument) jT1Nome.getDocument()).setDocumentFilter(new javax.swing.text.DocumentFilter() {
+            
+            
     @Override
     public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
         if (string != null) {
@@ -443,6 +446,44 @@ if (!sexo.matches("^[MF]{1}$")) {
     }//GEN-LAST:event_jBExcluirActionPerformed
 
     private void jBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAlterarActionPerformed
+        
+        
+        
+        String sexo = jT3Sexo.getText().trim();
+
+if (!sexo.matches("^[MF]{1}$")) {
+    JOptionPane.showMessageDialog(this, "O campo Sexo deve conter apenas 'M' ou 'F'.", "Erro de validação", JOptionPane.ERROR_MESSAGE);
+    return;
+}
+
+
+        
+        String texto = jT3Sexo.getText().toUpperCase();
+        
+        String texto1 = jT1Nome.getText().toUpperCase();
+        jT1Nome.setText(texto1);
+         
+        ((javax.swing.text.AbstractDocument) jT1Nome.getDocument()).setDocumentFilter(new javax.swing.text.DocumentFilter() {
+            
+            
+    @Override
+    public void insertString(DocumentFilter.FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
+        if (string != null) {
+            string = string.replaceAll("[^a-zA-Z ]", "").toUpperCase();
+            super.insertString(fb, offset, string, attr);
+        }
+    }
+
+    @Override
+    public void replace(DocumentFilter.FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+        if (text != null) {
+            text = text.replaceAll("[^a-zA-Z ]", "").toUpperCase();
+            super.replace(fb, offset, length, text, attrs);
+        }
+    }
+});
+        
+        
         try {
             alteraRegistro();
         } catch (SQLException ex) {
