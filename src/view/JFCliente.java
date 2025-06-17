@@ -108,6 +108,11 @@ public class JFCliente extends javax.swing.JFrame {
 
         jLabel7.setText("ID: ");
 
+        jT1Nome.setEnabled(false);
+
+        jT0Id.setEnabled(false);
+
+        jT2DataDia.setEnabled(false);
         jT2DataDia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT2DataDiaActionPerformed(evt);
@@ -366,22 +371,44 @@ public class JFCliente extends javax.swing.JFrame {
         jPanel1.getAccessibleContext().setAccessibleName("Cadastro de Clientes");
         jPanel2.getAccessibleContext().setAccessibleName("");
 
-        getAccessibleContext().setAccessibleName("Dados dos Usuarios");
-
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
     // BOTÃO NOVO - Precionando
     private void jBNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoActionPerformed
+       
+           jT2DataDia.setText("");
+        jT2DataMes.setText("");
+        
+        jT2DataDia.setEnabled(true);
+        jT2DataMes.setEnabled(true);
+        jT1Nome.setEnabled(true);
+        
+        
         habilitaCampos();
         // Limpa os dados dos campos
-        limpaCampos();        
+        limpaCampos(); 
+      
+        
+        
+        
     }//GEN-LAST:event_jBNovoActionPerformed
       
     // BOTÃO CADASTRAR - Precionando
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
         cadastraRegistro();  
+        
+        jT2DataDia.setText("");
+        jT2DataMes.setText("");
+        
+        jT2DataDia.setEnabled(false);
+        jT2DataMes.setEnabled(false);
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jBCadastrarActionPerformed
      
     // BOTÃO PESQUISAR - Precionando
@@ -478,7 +505,7 @@ public class JFCliente extends javax.swing.JFrame {
                     desabilitaCampos();
 
                 } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(rootPane, "Erro ao cadastrar cliente.");
+                    JOptionPane.showMessageDialog(rootPane, "Erro ao cadastrar cliente." + ex.getMessage());
                 }
             }
         } else {
