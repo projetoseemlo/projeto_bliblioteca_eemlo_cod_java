@@ -386,7 +386,7 @@ if (!sexo.matches("^[MF]{1}$")) {
          
         ((javax.swing.text.AbstractDocument) jT1Nome.getDocument()).setDocumentFilter(new javax.swing.text.DocumentFilter() {
             
-            
+        
     @Override
     public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
         if (string != null) {
