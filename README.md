@@ -1,32 +1,51 @@
-# Projeto Biblioteca em Java Desktop
+## Projeto Biblioteca em Java Desktop
 
-Software para biblioteca em java, simples. O sistema contém somente as funcionalidades básicas, desenvolvido a fim de obter nota para a matéria de Programação OO do 3ª período de Análise e Desenvolvimento de Sistemas.
+Software para biblioteca em java.
+
+O foi desenvolvido a fim de fornecer um produto para a Biblioteca e obter aplicar conhecimentos oriundos do trabalho interdisciplinar.
+
+# Disciplinas envolvidas:#
 
 ---
 
-**Author:** João Paulo Ferreira da Silva (PauloJP)
+**Adaptado por:**  
+- Gregory https://github.com/GregoryVitor 
+- Guilbert, 
+- Isaac https://github.com/IsaacsBusiness,
+- Luiz
+- Daniel
+Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (menção) 
 
-**Data:** 06/2015
+**Tutores**
+- Fabiana  https://github.com/fabianajsantos | https://www.linkedin.com/in/fabianajsantos/
+- Tales https://www.linkedin.com/in/tsiqueira/ 
+- Leandro
+
+
+**Data:** 05/2025
 
 # Tecnologias Utilizadas:
 - **Netbeans** como IDE
 - **Java 7**
 
-# Modelagem
-<img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/modelagem.png" width="460" />
-
 ## Telas
 ### Tela Inicial
-<img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-inicial.png" width="460" />
+<img src="https://raw.githubusercontent.com/projetoseemlo/projeto_bliblioteca_eemlo_cod_java/master/imagens/tela-inicial.png" width="460" />
 
-### Tela Edição de Clientes
+### Tela Usuários
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-clientes.png" width="460" />
 
-### Tela Edição de Livros
+### Tela Livros
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-livros.png" width="460" />
 
-### Tela Edição de Empréstimos
+### Tela Empréstimos
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-emprestimos.png" width="460" />
 
-### Tela Edição de Multas
+### Tela Penalidades
 <img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/tela-multas.png" width="460" />
+
+# Modelagem de dados
+<img src="https://raw.githubusercontent.com/paulojp-dev/projeto-biblioteca-java/master/imagens/modelagem.png" width="460" />
+
+
+
