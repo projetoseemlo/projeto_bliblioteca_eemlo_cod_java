@@ -4,7 +4,7 @@ Software para biblioteca em java.
 
 O foi desenvolvido a fim de fornecer um produto para a Biblioteca e obter aplicar conhecimentos oriundos do trabalho interdisciplinar.
 
-# Disciplinas envolvidas:#
+# Disciplinas envolvidas:
 
 ---
 
@@ -14,7 +14,8 @@ O foi desenvolvido a fim de fornecer um produto para a Biblioteca e obter aplica
 - Isaac https://github.com/IsaacsBusiness,
 - Luiz
 - Daniel
-Sinceros agradecimentos ao autor:  João Paulo Ferreira da Silva (menção) 
+  
+Sinceros agradecimentos ao autor
 
 **Tutores**
 - Fabiana  https://github.com/fabianajsantos | https://www.linkedin.com/in/fabianajsantos/
