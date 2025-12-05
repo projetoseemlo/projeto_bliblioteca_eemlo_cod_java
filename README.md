@@ -11,7 +11,7 @@ O foi desenvolvido a fim de fornecer um produto para a Biblioteca e obter aplica
 **Adaptado por:**  
 - Gregory https://github.com/GregoryVitor 
 - Guilbert, 
-- Isaac https://github.com/IsaacsBusiness,
+- Isaac https://github.com/ZackDevSys | https://github.com/IsaacsBusiness | www.linkedin.com/in/zack-dev
 - Luiz
 - Daniel
   
